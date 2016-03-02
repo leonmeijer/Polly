@@ -10,7 +10,7 @@ namespace Polly.Retry
     {
         public Task<bool> CanRetryAsync(Exception ex, CancellationToken ct, bool continueOnCapturedContext)
         {
-            return Task.FromResult(CanRetry(ex));
+            return TaskEx.FromResult(CanRetry(ex));
         }
     }
 }

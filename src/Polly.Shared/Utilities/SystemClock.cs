@@ -30,7 +30,7 @@ namespace Polly.Utilities
         /// Allows the setting of a custom async Sleep implementation for testing.
         /// By default this will be a call to <see cref="M:Task.Delay"/>
         /// </summary>
-        public static Func<TimeSpan, CancellationToken, Task> SleepAsync = Task.Delay;
+        public static Func<TimeSpan, CancellationToken, Task> SleepAsync = TaskEx.Delay;
 #endif
         /// <summary>
         /// Allows the setting of a custom DateTime.UtcNow implementation for testing.
@@ -50,7 +50,7 @@ namespace Polly.Utilities
             Sleep = timeSpan => new ManualResetEvent(false).WaitOne(timeSpan);
 #endif
 #if SUPPORTS_ASYNC
-            SleepAsync = Task.Delay;
+            SleepAsync = TaskEx.Delay;
 #endif
             UtcNow = () => DateTime.UtcNow;
         }

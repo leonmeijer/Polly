@@ -70,12 +70,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Polly.Net45\Polly.Net45.csproj">
-      <Project>{29265540-f724-4324-9321-643a0fcb133f}</Project>
-      <Name>Polly.Net45</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="..\Polly.SharedSpecs\Polly.SharedSpecs.projitems" Label="Shared" />
